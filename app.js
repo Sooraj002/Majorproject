@@ -1,38 +1,45 @@
+// importing modules
 const express = require("express");
 const app = express();
+const Listing = require("./models/listing.js");
+
+
+//  importing database and connecting
 const mongoose = require("mongoose");
-const mongo_url = mongoose.connect('mongodb://127.0.0.1:27017/wanderlust');
-const listing = require("..models\listing.js");
+main().catch(err => console.log(err));
 
-main().then( () => {
-    console.log("Connected to db");
-})
-.catch ((err) => {
-    console.log(err);
-});
-
-async function main() {
-    await mongoose.connect(mongo_url);
-}
-
-app.get("/", (req, res) => {
-    res.send("Hi , i am root");
-});
-
-app.get("/testlisting", async (req, res) => {
-    let samplelisting = new listing({
-        title: "My new villa",
-        description:"By the beach",
-        prince:1200,
-        location:"Calangute, Goa",
-        country:"india"
+main()
+    .then(() => {
+        console.log("Connected To db");
+    })
+    .catch((err) => {
+        console.log(err);
     });
 
-    await samplelisting.save();
-    console.log("sample was saved");
-    res.send("successful testing")
+async function main() {
+    await mongoose.connect('mongodb://127.0.0.1:27017/traveller');
+}
+
+//  Home Route
+app.get("/", (req, res) => {
+    res.send("Hi, I am root");
+});
+
+
+app.get("/testListing", async(req, res) => {
+    let sampleListing = new Listing({
+        title: "My new villa",
+        description: "By the Beach",
+        price: 1200,
+        location: "Calamput, Goa",
+        country: "India",
+    });
+
+    await sampleListing.save();
+    console.log("Sample was saved");
+    res.send("Successful testing")
 });
 
 app.listen(8080, () => {
-    console.log("Sever  is listening to 8080");
+    console.log("Server is listing to server 8080");
 });
