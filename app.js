@@ -22,7 +22,7 @@ async function main() {
 }
 
 app.set("view engine", "ejs");
-app.set(express.urlencoded({ extended: true }))
+app.use(express.urlencoded({ extended: true }))
 app.set("views", path.join(__dirname, "views"));
 
 //  Home Route
@@ -51,9 +51,11 @@ app.get("/listings/:id", async(req, res) => {
 });
 
 
+
 app.post("/listings", async(req, res) => {
-    const newlisting = new Listing(req.body);
-    await newlisting.save();
+    let newListing = new Listing(req.body.listing); //listing object h
+    console.log(newListing);
+    await newListing.save();
     res.redirect("/listings");
 });
 

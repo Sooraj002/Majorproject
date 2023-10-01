@@ -4,20 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traveller</title>
+    <title>Document</title>
 </head>
 
 <body>
-    Create New Listing
-    <form method="post" action="/listings">
+    <form action="/listings" method="POST">
+        <h1>Add New Listings</h1>
         <br><br>
-        <input type="text" name="listing[title]" id="" placeholder="Enter Title">
+        <input type="text" placeholder="title" name="listing[title]">
         <br><br>
         <textarea name="listing[description]" placeholder="Enter description"></textarea>
         <br><br>
-        <input type="" name="listing[image]" placeholder="Enter image URL">
+        <input type="text" name="listing[image]" placeholder="Enter img URL">
         <br><br>
-        <input type="number" name="listing[price]" placeholder="Enter price">
+        <input type="number" name="listing[price]" placeholder="Enter Price">
         <br><br>
         <input type="text" name="listing[location]" placeholder="Enter location">
         <br><br>
