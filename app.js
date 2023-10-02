@@ -3,6 +3,7 @@ const express = require("express");
 const app = express();
 const Listing = require("./models/listing.js");
 const path = require("path")
+const methodOverride = require("method-override");
 
 
 //  importing database and connecting
@@ -24,6 +25,7 @@ async function main() {
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }))
 app.set("views", path.join(__dirname, "views"));
+app.use(methodOverride("_method"));
 
 //  Home Route
 app.get("/", (req, res) => {
@@ -51,13 +53,27 @@ app.get("/listings/:id", async(req, res) => {
 });
 
 
-
+//Create Route
 app.post("/listings", async(req, res) => {
     let newListing = new Listing(req.body.listing); //listing object h
     console.log(newListing);
     await newListing.save();
     res.redirect("/listings");
 });
+
+// Edit Route
+app.get("/listings/:id/edit", async(req, res) => {
+    let { id } = req.params;
+    const listing = await Listing.findById(id)
+    res.render("listings/edit.ejs", { listing })
+})
+
+// Update route
+app.put("/listings/:id", async(req, res) => {
+    let { id } = req.params;
+    Listing.findByIdAndUpdate(id, {...req.body.listing });
+    res.redirect("/listings");
+})
 
 
 //  //  Test data
