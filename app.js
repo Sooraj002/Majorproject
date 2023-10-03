@@ -72,40 +72,10 @@ app.get("/listings/:id/edit", async(req, res) => {
 app.put("/listings/:id", async(req, res) => {
     let { id } = req.params;
     let updateListing = req.body.listing;
-    // console.log(updateListing);
-    // console.log({...updateListing});  
     await Listing.findByIdAndUpdate(id, updateListing);
     res.redirect("/listings")
 });
 
-
-
-// app.put("/listings/:id", async(req, res) => {
-//     let { id } = req.params;
-//     // console.log(req.body.listing);
-//     // let update = (req.body.listing);
-//     let updated = Listing.findByIdAndUpdate(update.title, update.description, update.price);
-//     console.log(updated);
-//     // Listing.findByIdAndUpdate(id, {...req.body.listing });
-//     // await Listing.save();
-//     // res.redirect("/listings");
-// })
-
-
-//  //  Test data
-// app.get("/testListing", async(req, res) => {
-//     let sampleListing = new Listing({
-//         title: "My new villa",
-//         description: "By the Beach",
-//         price: 1200,
-//         location: "Calamput, Goa",
-//         country: "India",
-//     });
-
-//     await sampleListing.save();
-//     console.log("Sample was saved");
-//     res.send("Successful testing")
-// });
 
 app.listen(8080, () => {
     console.log("Server is listing to server 8080");
