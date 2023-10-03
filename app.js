@@ -22,15 +22,18 @@ async function main() {
     await mongoose.connect('mongodb://127.0.0.1:27017/traveller');
 }
 
+
 app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }))
 app.set("views", path.join(__dirname, "views"));
 app.use(methodOverride("_method"));
 
+
 //  Home Route
 app.get("/", (req, res) => {
     res.send("Hi, I am root");
 });
+
 
 // Index Route
 app.get("/listings", async(req, res) => {
@@ -61,6 +64,7 @@ app.post("/listings", async(req, res) => {
     res.redirect("/listings");
 });
 
+
 // Edit Route
 app.get("/listings/:id/edit", async(req, res) => {
     let { id } = req.params;
@@ -68,11 +72,20 @@ app.get("/listings/:id/edit", async(req, res) => {
     res.render("listings/edit.ejs", { listing })
 })
 
+
 // Update route
 app.put("/listings/:id", async(req, res) => {
     let { id } = req.params;
     let updateListing = req.body.listing;
     await Listing.findByIdAndUpdate(id, updateListing);
+    res.redirect("/listings")
+});
+
+
+// Delete Route
+app.delete("/listings/:id", async(req, res) => {
+    let { id } = req.params;
+    await Listing.findByIdAndDelete(id);
     res.redirect("/listings")
 });
 
