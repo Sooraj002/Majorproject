@@ -21,7 +21,15 @@ body {
     /* margin-top: 40px; */
 }
 
+.card-body {
+    position: relative;
+}
+
 .detail-btn {
+    position: relative;
+}
+
+.details-btn {
     position: absolute;
 }
 
@@ -110,6 +118,7 @@ img:hover {
     align-items: flex-start;
     flex-wrap: wrap;
     /* flex-grow: 1; */
+    position: relative;
 }
 
 .card {
@@ -120,6 +129,7 @@ img:hover {
     height: 390px;
     border-radius: 20px;
     transition: 0.5s;
+    position: relative;
 }
 
 .card:hover {
