@@ -1,17 +1,37 @@
 <% layout('/layouts/boilerplate') -%>
 
     <body>
-        <h1>All Listings</h1>
-        <!-- <form action="/listings/new">
-            <button>Add Listings</button>
-        </form> -->
-        <ul>
+
+        <div class="outer-card">
+
             <% for(let listing of allListings) { %>
-                <li>
-                    <a href="/listings/<%= listing._id %>">
-                        <%= listing.title %>
-                    </a>
-                </li>
+
+                <div class="card" style="width: 23rem;">
+                    <img src="<%= listing.image %>" class="card-img-top" alt="...">
+
+                    <div class="<%= listing.description %>">
+                        <br>
+                        <h5 class="card-title">
+                            <%= listing.title %>
+                        </h5>
+                        <p class="card-text">
+                            <%= listing.description %>
+                        </p>
+                        <br>
+                        <div class="detail-btn">
+                            <a href="/listings/<%= listing._id %>" class="btn-lg details-btn">See Details</a>
+                        </div>
+                    </div>
+                </div>
                 <% } %>
-        </ul>
+
+        </div>
+        <!-- <div class="card" style="width: 18rem;">
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div> -->
     </body>
