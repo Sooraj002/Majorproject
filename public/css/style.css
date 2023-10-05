@@ -25,14 +25,24 @@ body {
     position: relative;
 }
 
-
-/* .detail-btn {
+.detail-btn {
     position: relative;
 }
 
 .details-btn {
     position: absolute;
-} */
+}
+
+.background-img {
+    filter: blur(40px);
+    /* filter: brightness(10%), blur(50px); */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    /* background-image; */
+    opacity: 0.4;
+}
 
 input,
 textarea {
@@ -127,7 +137,7 @@ img:hover {
     color: white;
     /* padding: 10px; */
     margin-bottom: 20px;
-    height: 400px;
+    height: 390px;
     border-radius: 20px;
     transition: 0.5s;
     position: relative;
@@ -141,7 +151,6 @@ img:hover {
 .card-text,
 .card-title {
     margin-left: 15px;
-    /* height: 10px; */
 }
 
 
@@ -209,16 +218,4 @@ img:hover {
 
 .fa-brands:hover {
     scale: 1.6;
-}
-
-
-/* 
-.detail-btn{
-    position: relative;
-} */
-
-.seeBtn {
-    position: absolute;
-    top: 135px;
-    right: 10px
 }
