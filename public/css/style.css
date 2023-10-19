@@ -1,7 +1,15 @@
-/* Basics */
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
 a {
     text-decoration: none;
+}
+
+.container {
+    flex: 1;
 }
 
 
@@ -45,8 +53,12 @@ a {
     text-decoration: underline;
 }
 
+.f-info {
+    width: 100%;
+}
+
 .f-info i {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
 }
 
 
@@ -62,7 +74,7 @@ a {
     border: none;
     width: 23rem;
     /* height: 24rem; */
-    margin-bottom: 2rem;
+    /* margin-bottom: 2rem */
     margin: 1rem;
     transition: 0.4s;
     border-radius: 1rem !important;
@@ -75,7 +87,7 @@ a {
 }
 
 .card-img-top {
-    border-radius: 1rem !important;
+    border-radius: 1rem 1rem 0rem 0rem !important;
     width: 100% !important;
     object-fit: cover !important;
 }

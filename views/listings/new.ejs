@@ -1,7 +1,6 @@
 <%- layout("layouts/boilerplate.ejs") %>
-
-    <div class="row">
-        <div class="cols-8 offset-2">
+    <div class="">
+        <div class="cols-8">
             <form action="/listings" method="POST">
                 <h1>Add New Listings</h1>
                 <br><br>
@@ -18,11 +17,11 @@
                     <input type="text" name="listing[image]" placeholder="Enter Image URL" class="form-control">
                 </div>
                 <div class="row ">
-                    <div class="mb-3 col-md-4">
+                    <div class="mb-3 col-md-5">
                         <label for="price" class="form-label">Price</label>
                         <input type="number" name="listing[price]" placeholder="Enter Price" class="form-control">
                     </div>
-                    <div class="mb-3 col-md-8">
+                    <div class="mb-2 col-md-4">
                         <label for="location" class="form-label">Location</label>
                         <input type="text" name="listing[location]" placeholder="Enter location" class="form-control">
                     </div>
@@ -33,6 +32,7 @@
                 </div>
                 <br><br>
                 <button class="btn btn-dark">Add</button>
+                <br><br><br><br><br>
             </form>
         </div>
     </div>

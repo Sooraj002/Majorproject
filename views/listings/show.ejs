@@ -1,31 +1,36 @@
 <%- layout("layouts/boilerplate.ejs") %>
 
-    <body>
-        <h2>Listing details</h2>
-        <ul>
-            <li>
-                <%= listing.title %>
-            </li>
-            <li>
-                <%= listing.description %>
-            </li>
-            <li>
-                &#8377;
-                <%=  listing.price.toLocaleString("en-IN") %>
-            </li>
-            <li>
-                <%= listing.location %>
-            </li>
-            <li>
-                <%= listing.country %>
-            </li>
-            <br><br>
-            <h3> <a href="/listings/<%= listing._id %>/edit"> Edit this listing </a></h3>
-            <form method="post" action="/listings/<%= listing._id %>?_method=DELETE">
-                <button>
+    <h2>Listing details</h2>
+    <ul>
+        <li>
+            <%= listing.title %>
+        </li>
+        <li>
+            <%= listing.description %>
+        </li>
+        <li>
+            &#8377;
+            <%=  listing.price.toLocaleString("en-IN") %>
+        </li>
+        <li>
+            <%= listing.location %>
+        </li>
+        <li>
+            <%= listing.country %>
+        </li>
+        <br><br>
+        <h3> <a href="/listings/<%= listing._id %>/edit"> Edit this listing </a></h3>
+        <form method="post" action="/listings/<%= listing._id %>?_method=DELETE">
+            <button>
                 delete Listing
             </button>
-            </form>
+        </form>
+    </ul>
 
-        </ul>
-    </body>
+    <!-- // "bootstrap": "^5.3.2",
+    // "ejs": "^3.1.9",
+    // "ejs-mate": "^4.0.0",
+    // "express": "^4.18.2",
+    // "method-override": "^3.0.0",
+    // "mongoose": "^7.5.3",
+    // "nodemon": "^3.0.1" -->
