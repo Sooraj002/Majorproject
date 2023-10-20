@@ -1,7 +1,4 @@
 <%- layout("layouts/boilerplate.ejs") %>
-
-
-    <h1>All Listings</h1>
     <div class="outer-card ">
         <% for(let listing of allListings) { %>
             <a href="/listings/<%= listing._id %>">
@@ -9,8 +6,11 @@
                     <img src="<%= listing.image %>" class="card-img-top" style="height: 20rem;" alt="...">
                     <div class="card-body">
                         <p class="card-text">
-                            <b><%= listing.title %></b><br> &#8377;
-                            <%= listing.price.toLocaleString("en-IN") %>
+                            <b><%= listing.title %></b><br>
+                            <%= listing.location %>
+                            <br> 
+                            &#8377;
+                            <%= listing.price.toLocaleString("en-IN") %> 
                         </p>
                     </div>
                 </div>
