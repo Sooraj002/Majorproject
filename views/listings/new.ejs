@@ -7,10 +7,22 @@
                 <div class="mb-3">
                     <label for="title" class="form-label">Title</label>
                     <input type="text" placeholder="title" name="listing[title]" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Enter Title
+                      </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
                 </div>
                 <div class="mb-3">
                     <label for="description" class="form-label">Description</label>
                     <textarea name="listing[description]" placeholder="Enter description" class="form-control" required></textarea>
+                    <div class="invalid-feedback">
+                        Enter Description
+                      </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
                 </div>
                 <div class="mb-3">
                     <label for="image" class="form-label">Image</label>
@@ -19,16 +31,34 @@
                 <div class="row ">
                     <div class="mb-4 col-md-6">
                         <label for="price" class="form-label">Price</label>
-                        <input type="number" name="listing[price]" placeholder="Enter Price" class="form-control" required>
+                        <input type="text" name="listing[price]" placeholder="Enter Price" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Enter Price
+                          </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
                     </div>
                     <div class="mb-2 col-md-6">
                         <label for="location" class="form-label">Location</label>
                         <input type="text" name="listing[location]" placeholder="Enter location" class="form-control" required>
+                        <div class="invalid-feedback">
+                            Enter Location
+                          </div>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
                     </div>
                 </div>
                 <div class="mb-3">
                     <label for="country" class="form-label">Country</label>
                     <input type="text" name="listing[country]" placeholder="Enter country" class="form-control" required>
+                    <div class="invalid-feedback">
+                        Enter Country
+                      </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                      </div>
                 </div>
                 <br><br>
                 <button class="btn btn-dark">Add</button>
