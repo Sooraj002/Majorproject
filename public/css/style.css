@@ -163,3 +163,10 @@ object-fit: cover !important;
     width: 4.5rem;
     height: 2.3rem;
 }
+
+.alert{
+    margin: auto;
+    margin-top: 10rem;
+    text-align: center;
+    width: 30rem;
+}
