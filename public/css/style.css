@@ -19,8 +19,8 @@ a {
     height: 4rem !important;
     /* --globalnav-backdrop-filter: saturate(180%) blur(20px); */
     /* --globalnav-background: rgba(251, 251, 253, .8); */
-    background-color: rgba(225, 225, 225, 0.3);
-    backdrop-filter: saturate(110%) blur(8px);
+    background-color: rgba(225, 225, 225, 0.594);
+    backdrop-filter: blur(8px);
     border: none;
 }
 
@@ -124,7 +124,7 @@ font-weight: 600;
     display: flex;
     flex-wrap: wrap;
     margin: auto;
-    margin-top: 1rem;
+    margin-top: 2.6rem;
     background-color: rgb(202, 202, 202);
     border-radius: 15px;
     padding: 1rem;
