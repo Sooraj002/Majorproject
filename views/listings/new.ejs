@@ -1,10 +1,10 @@
 <%- layout("layouts/boilerplate.ejs") %>
-    <div class="new">
-        <div class="cols-8">
+  <div class="new">
+      <img class="form-img" src="https://source.unsplash.com/random/?house_in_nature" alt="image">
+        <div class="cols-1">
             <form action="/listings" method="POST" novalidate class="needs-validation">
                 <h1 class="head-new">Add New Listings</h1>
-                <br><br>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="title" class="form-label">Title</label>
                     <input type="text" placeholder="title" name="listing[title]" class="form-control" required>
                     <div class="invalid-feedback">
@@ -14,7 +14,7 @@
                         Looks good!
                       </div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-1 ">
                     <label for="description" class="form-label">Description</label>
                     <textarea name="listing[description]" placeholder="Enter description" class="form-control" required></textarea>
                     <div class="invalid-feedback">
@@ -24,12 +24,12 @@
                         Looks good!
                       </div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="image" class="form-label">Image</label>
                     <input type="text" name="listing[image]" placeholder="Enter Image URL" class="form-control">
                 </div>
                 <div class="row ">
-                    <div class="mb-4 col-md-6">
+                    <div class="mb-2 col-md-6">
                         <label for="price" class="form-label">Price</label>
                         <input type="text" name="listing[price]" placeholder="Enter Price" class="form-control" required>
                         <div class="invalid-feedback">
@@ -50,7 +50,7 @@
                           </div>
                     </div>
                 </div>
-                <div class="mb-3">
+                <div class="mb-2">
                     <label for="country" class="form-label">Country</label>
                     <input type="text" name="listing[country]" placeholder="Enter country" class="form-control" required>
                     <div class="invalid-feedback">
@@ -60,12 +60,11 @@
                         Looks good!
                       </div>
                 </div>
-                <br><br>
-                <button class="btn btn-dark">Add</button>
-                <br><br><br><br><br>
+                <button class="btn-form btn-dark">Add</button>
             </form>
         </div>
     </div>
+
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
 (() => {

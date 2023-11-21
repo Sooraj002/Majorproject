@@ -1,9 +1,9 @@
 <%- layout("layouts/boilerplate.ejs") %>
 <div class="new">
-    <div class="cols-8 ">
+      <img class="form-img" src="<%= listing.image %>" alt="image">
+      <div class="cols-8 ">
     <h1 class="head-new">Edit Listings</h1>
     <form method="POST" action="/listings/<%= listing._id %>?_method=PUT" novalidate class="needs-validation">
-        <br><br>
         <div class="mb-3">
             <label for="title" class="form-label">Title</label>
             <input type="text" value="<%= listing.title %>" placeholder="title" name="listing[title]" class="form-control" required>
@@ -60,9 +60,7 @@
                 Looks good!
               </div>
         </div>
-        <br><br>
-        <button class="btn btn-dark">Edit</button>
-        <br><br><br><br><br>
+        <button class="btn-form btn-dark">Edit</button>
     </form>
     </div>
 </div>
