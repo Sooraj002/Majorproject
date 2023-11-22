@@ -1,7 +1,7 @@
 <%- layout("layouts/boilerplate.ejs") %>
   <div class="new">
       <img class="form-img" src="https://source.unsplash.com/random/?house_in_nature" alt="image">
-        <div class="cols-1">
+        <div class="form-input cols-1">
             <form action="/listings" method="POST" novalidate class="needs-validation">
                 <h1 class="head-new">Add New Listings</h1>
                 <div class="mb-2">
@@ -60,10 +60,24 @@
                         Looks good!
                       </div>
                 </div>
-                <button class="btn-form btn-dark">Add</button>
+                <button class="btn-form">Add</button>
             </form>
         </div>
     </div>
+
+    <!-- <script>
+      // var new1 = document.getElementsByClassName('new');
+
+function new_animation() {
+    setTimeout(() => {
+      document.getElementsByClassName('new').style.background_
+      $(document).getElementById('temperatureBar').style.width = width+"px";
+        // new1.style.scale=0.4+'s';
+    }, 1000);
+}
+
+new_animation(); -->
+    <!-- </script> -->
 
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
@@ -85,4 +99,7 @@
     }, false)
   })
 })()
+
     </script>
+
+  <script src="public/js/script"></script>
