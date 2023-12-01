@@ -12,15 +12,36 @@
         <b>Country</b> <%= listing.country %>
         <br>
         <div class="show-inner">
-            <h3> <a href="/listings/<%= listing._id %>/edit">
-                <button class="btn btn-dark">Edit</button> </a></h3>
+            <!-- <a href="/listings/<%= listing._id %>/edit"></a> -->
+            <button  class="btn-show" >
+                <a href="/listings/<%= listing._id %>/edit">
+                    Edit
+                </a> 
+            </button>
+               
             <form method="post" action="/listings/<%= listing._id %>?_method=DELETE">
-                <button class="btn btn-dark">
-                    delete
+                <button>
+                    <a class="btn-show">
+                        delete
+                    </a>
                 </button>
             </form>
         </div>
     </div>
+    <div class="review">
+        <br><br>
+        <h4>Leave a Review</h4>
+        <form class="mb-3">
+            <div class="mb-3 mt-3">
+                <label for="rating">Rating</label>
+                <input class="form-range" type="range" min="1" max="5" id="rating" name="review[rating]">
+            </div>
+            <div class="mb-3 mt-3">
+                <label class="form-control" for="comment">Comments</label>
+                <textarea name="review[rating]" id="comment"  rows="5"></textarea>
+            </div>
+            <button class="btn-show">Sumit</button>
+        </form>
+    </div>
 </div>
-<br><br>
 

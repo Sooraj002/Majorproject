@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+<!-- <nav class="navbar1 navbar-expand-md bg-body-light border-bottom sticky-top">
     <div class="container-fluid">
         <a class="navbar-brand nav-main" href="/listings"><i class="fa-regular fa-compass"></i></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,4 +15,37 @@
             </ul>
         </div>
     </div>
+</nav> -->
+
+<nav class="navbar ">
+    <div class="nav-icons">
+        <a class="navbar-brand nav-main" href="/listings"><i class="fa-regular fa-compass"></i></a>
+        <div class="nav-box">
+            <a class="nav-link " aria-current="page" href="/listings">Home</a>
+            &nbsp;&nbsp;
+            <a class="nav-link" href="/listings/new">Add New</a>
+        </div>
+  
+    </div>
+    
 </nav>
+
+<script>
+    // When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("navbar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
