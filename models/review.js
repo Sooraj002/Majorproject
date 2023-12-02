@@ -1,7 +1,9 @@
 const mongoose = require("mongoose")
-const Schema = require("mongoose.schema")
+const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema = ({
+// const Schema = require("mongoose.schema")
+
+const reviewSchema = new Schema({
     comment:String,
     rating:{
         type: Number,
@@ -14,4 +16,4 @@ const reviewSchema = new Schema = ({
     }
 });
 
-modeule.export = mongoose.model("Review", reviewSchema);
+module.export = mongoose.model("Review", reviewSchema);
